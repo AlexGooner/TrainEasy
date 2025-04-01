@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Cook it easy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter">Вход</string>
+    <string name="login_hint">Нет аккаунта? Зарегистрируйтесь</string>
+    <string name="enter_login">Введите логин</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="log_in">Войти</string>
+    <string name="registration">Регистрация</string>
+    <string name="crate_username">Придумайте логин</string>
+    <string name="create_password">Придумайте пароль</string>
+    <string name="create_password_again">Введите пароль еще раз</string>
+    <string name="do_registration">Зарегистрироваться</string>
+</resources>

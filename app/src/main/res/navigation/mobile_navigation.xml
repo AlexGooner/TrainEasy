@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_log_in">
+
+
+<fragment
+    android:id="@+id/navigation_registration"
+    android:name="com.citrus.cookiteasy.presentation.registration.RegistrationFragment">
+    <action
+        android:id="@+id/action_registration_to_profile_info"
+        app:destination="@+id/navigation_profile_info"
+        app:enterAnim="@anim/slide_in"
+        app:exitAnim="@anim/slide_out"
+        app:popEnterAnim="@anim/slide_in_pop"
+        app:popExitAnim="@anim/slide_out_pop"/>
+</fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_profile_info"
+        android:name="com.citrus.cookiteasy.presentation.profileinfo.ProfileInfoFragment">
+
+        <action
+            android:id="@+id/action_profile_info_to_welcome"
+            app:destination="@+id/navigation_welcome"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in_pop"
+            app:popExitAnim="@anim/slide_out_pop"/>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_welcome"
+        android:name="com.citrus.cookiteasy.presentation.welcome.WelcomeFragment">
+
+        <action
+            android:id="@+id/action_welcome_to_home"
+            app:destination="@+id/navigation_home"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in_pop"
+            app:popExitAnim="@anim/slide_out_pop"/>
+
+        <argument
+            android:name="username"
+            app:argType="string"
+            android:defaultValue=""/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_log_in"
+        android:name="com.citrus.cookiteasy.presentation.login.LogInFragment">
+
+        <action
+            android:id="@+id/action_login_to_registration"
+            app:destination="@+id/navigation_registration"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in_pop"
+            app:popExitAnim="@anim/slide_out_pop"/>
+
+        <action
+            android:id="@+id/action_login_to_welcome"
+            app:destination="@+id/navigation_welcome"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in_pop"
+            app:popExitAnim="@anim/slide_out_pop"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.citrus.cookiteasy.presentation.home.HomeFragment">
+
+
+    </fragment>
+
+
+
+
+
+
+
+</navigation>
