@@ -82,4 +82,7 @@ dependencies {
 
     implementation ("me.relex:circleindicator:2.1.6")
     implementation ("androidx.datastore:datastore-preferences:1.1.3")
+
+    implementation (libs.lottie)
+
 }

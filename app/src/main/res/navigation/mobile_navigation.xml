@@ -5,17 +5,25 @@
     app:startDestination="@+id/navigation_log_in">
 
 
-<fragment
-    android:id="@+id/navigation_registration"
-    android:name="com.citrus.cookiteasy.presentation.registration.RegistrationFragment">
-    <action
-        android:id="@+id/action_registration_to_profile_info"
-        app:destination="@+id/navigation_profile_info"
-        app:enterAnim="@anim/slide_in"
-        app:exitAnim="@anim/slide_out"
-        app:popEnterAnim="@anim/slide_in_pop"
-        app:popExitAnim="@anim/slide_out_pop"/>
-</fragment>
+    <fragment
+        android:id="@+id/navigation_registration"
+        android:name="com.citrus.cookiteasy.presentation.registration.RegistrationFragment">
+        <action
+            android:id="@+id/action_registration_to_profile_info"
+            app:destination="@+id/navigation_profile_info"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in_pop"
+            app:popExitAnim="@anim/slide_out_pop" />
+
+        <action
+            android:id="@+id/action_registration_to_welcome"
+            app:destination="@+id/navigation_welcome"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in_pop"
+            app:popExitAnim="@anim/slide_out_pop" />
+    </fragment>
 
 
     <fragment
@@ -28,7 +36,17 @@
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
             app:popEnterAnim="@anim/slide_in_pop"
-            app:popExitAnim="@anim/slide_out_pop"/>
+            app:popExitAnim="@anim/slide_out_pop" />
+
+        <argument
+            android:name="username"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <argument
+            android:name="password"
+            android:defaultValue=""
+            app:argType="string" />
 
     </fragment>
 
@@ -43,12 +61,12 @@
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
             app:popEnterAnim="@anim/slide_in_pop"
-            app:popExitAnim="@anim/slide_out_pop"/>
+            app:popExitAnim="@anim/slide_out_pop" />
 
         <argument
             android:name="username"
-            app:argType="string"
-            android:defaultValue=""/>
+            android:defaultValue=""
+            app:argType="string" />
 
     </fragment>
 
@@ -62,7 +80,7 @@
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
             app:popEnterAnim="@anim/slide_in_pop"
-            app:popExitAnim="@anim/slide_out_pop"/>
+            app:popExitAnim="@anim/slide_out_pop" />
 
         <action
             android:id="@+id/action_login_to_welcome"
@@ -70,7 +88,7 @@
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
             app:popEnterAnim="@anim/slide_in_pop"
-            app:popExitAnim="@anim/slide_out_pop"/>
+            app:popExitAnim="@anim/slide_out_pop" />
 
     </fragment>
 
@@ -80,11 +98,6 @@
 
 
     </fragment>
-
-
-
-
-
 
 
 </navigation>

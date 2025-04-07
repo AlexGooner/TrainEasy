@@ -12,4 +12,14 @@
     <string name="create_password">Придумайте пароль</string>
     <string name="create_password_again">Введите пароль еще раз</string>
     <string name="do_registration">Зарегистрироваться</string>
+    <string name="fill_information">Заполните информацию о себе</string>
+    <string name="your_name">Ваше имя</string>
+    <string name="your_last_name">Ваша фамилия</string>
+    <string name="birth_date">Ваша дата рождения</string>
+    <string name="your_height">Ваш рост</string>
+    <string name="your_weight">Ваш вес</string>
+    <string name="your_gender">Ваш пол</string>
+    <string name="done">Готово</string>
+    <string name="male">Мужской</string>
+    <string name="female">Женский</string>
 </resources>

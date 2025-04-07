@@ -12,6 +12,8 @@ class DatabaseRepository @Inject constructor(private val userDao: UserDao){
 
     suspend fun getAllUsers() = userDao.getAllUsers()
 
+    suspend fun updateUser(user: User) = userDao.updateUser(user)
+
 
 
 }

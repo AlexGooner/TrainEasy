@@ -24,5 +24,7 @@ data class User(
     @ColumnInfo(name = "weight")
     val weight: Int,
     @ColumnInfo(name = "bmi")
-    val bmi: Float
+    val bmi: Float,
+    @ColumnInfo(name = "gender")
+    val gender: String
 )
