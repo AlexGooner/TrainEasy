@@ -18,7 +18,6 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
 import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
@@ -30,7 +29,6 @@ import com.citrus.cookiteasy.data.database.User
 import com.citrus.cookiteasy.databinding.FragmentProfileInfoBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import java.util.Calendar
@@ -60,7 +58,6 @@ class ProfileInfoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val bottomNav = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
         bottomNav.visibility = View.GONE
-
         navController = findNavController()
 
         username = arguments?.getString("username")

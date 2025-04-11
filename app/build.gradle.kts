@@ -80,8 +80,12 @@ dependencies {
     implementation(libs.hilt.android.v2511)
     kapt(libs.hilt.android.compiler)
 
-    implementation ("me.relex:circleindicator:2.1.6")
-    implementation ("androidx.datastore:datastore-preferences:1.1.3")
+    implementation ("androidx.datastore:datastore-preferences:1.1.4")
+
+    implementation ("oauth.signpost:signpost-core:1.2.1.2")
+    implementation ("oauth.signpost:signpost-commonshttp4:1.2.1.2")
+    implementation ("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.9.3")
 
     implementation (libs.lottie)
 

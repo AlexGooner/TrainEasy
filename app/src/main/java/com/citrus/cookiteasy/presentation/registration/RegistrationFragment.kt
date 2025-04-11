@@ -51,8 +51,8 @@ class RegistrationFragment : Fragment() {
 
         val bottomNav = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
         bottomNav.visibility = View.GONE
-        navController = findNavController()
 
+        navController = findNavController()
         setupPasswordToggles()
         setupTextFields()
         setupRegistrationButton()
@@ -109,22 +109,27 @@ class RegistrationFragment : Fragment() {
                 showTopSnackbar("Введите имя пользователя")
                 false
             }
+
             password.isEmpty() -> {
                 showTopSnackbar("Введите пароль")
                 false
             }
+
             passwordAgain.isEmpty() -> {
                 showTopSnackbar("Повторите пароль")
                 false
             }
+
             password != passwordAgain -> {
                 showTopSnackbar("Пароли не совпадают")
                 false
             }
+
             password.length < 6 -> {
                 showTopSnackbar("Пароль должен содержать минимум 6 символов")
                 false
             }
+
             else -> true
         }
     }
@@ -152,7 +157,8 @@ class RegistrationFragment : Fragment() {
     }
 
     private fun hideKeyboard() {
-        val inputMethodManager = requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        val inputMethodManager =
+            requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(binding.root.windowToken, 0)
     }
 
@@ -184,6 +190,7 @@ class RegistrationFragment : Fragment() {
                     is RegistrationViewModel.RegistrationState.Loading -> {
                         binding.progressBar.visibility = View.VISIBLE
                     }
+
                     is RegistrationViewModel.RegistrationState.Success -> {
                         binding.progressBar.visibility = View.GONE
                         // Получаем введенные email и пароль
@@ -197,10 +204,12 @@ class RegistrationFragment : Fragment() {
                             )
                         )
                     }
+
                     is RegistrationViewModel.RegistrationState.Error -> {
                         binding.progressBar.visibility = View.GONE
                         showTopSnackbar(state.message)
                     }
+
                     RegistrationViewModel.RegistrationState.Idle -> {
                         binding.progressBar.visibility = View.GONE
                     }

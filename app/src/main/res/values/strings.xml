@@ -22,4 +22,9 @@
     <string name="done">Готово</string>
     <string name="male">Мужской</string>
     <string name="female">Женский</string>
+    <string name="popular_categories">Популярные категории</string>
+    <string name="recipe_of_the_day">Рецепт дня</string>
+    <string name="get_recipe">Получить рецепт</string>
+    <string name="prep_time">Подготовка: %d мин</string>
+    <string name="cook_time">Приготовление: %d мин</string>
 </resources>
