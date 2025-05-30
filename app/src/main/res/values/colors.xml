@@ -18,5 +18,9 @@
     <color name="background">#F4F3F3</color>
     <color name="gradient_blue">#800000FF</color>
     <color name="error_red">#FF5252</color>
-    <color name="yyelow">#FBFB53</color>
+    <color name="light_yellow">#FBFB53</color>
+    <color name="light_grey">#E1E1F0</color>
+    <color name="green">#6BC303</color>
+    <color name="red">#B30303</color>
+
 </resources>

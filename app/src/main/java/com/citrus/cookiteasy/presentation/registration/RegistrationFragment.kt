@@ -95,6 +95,10 @@ class RegistrationFragment : Fragment() {
             val password = binding.registrationPasswordEditText.text.toString().trim()
             val passwordAgain = binding.registrationPasswordAgainEditText.text.toString().trim()
 
+            if (passwordAgain.isNotEmpty() && password != passwordAgain) {
+                showTopSnackbar("Пароли не совпадают")
+               }
+
             if (validateInput(username, password, passwordAgain)) {
                 viewLifecycleOwner.lifecycleScope.launch {
                     viewModel.registerUser(username, password)
@@ -140,9 +144,9 @@ class RegistrationFragment : Fragment() {
                 val password = binding.registrationPasswordEditText.text.toString()
                 val passwordAgain = s.toString()
 
-                if (passwordAgain.isNotEmpty() && password != passwordAgain) {
-                    showTopSnackbar("Пароли не совпадают")
-                }
+//                if (passwordAgain.isNotEmpty() && password != passwordAgain) {
+//                    showTopSnackbar("Пароли не совпадают")
+//                }
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}

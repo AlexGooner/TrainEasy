@@ -11,6 +11,7 @@ android {
     namespace = "com.citrus.cookiteasy"
     compileSdk = 35
 
+
     defaultConfig {
         applicationId = "com.citrus.cookiteasy"
         minSdk = 24

@@ -1,0 +1,36 @@
+kotlin android. Я хочу написать приложение для спорта, я уже сделал валидацию пользователя с заполнением данных о нем @Entity(tableName = "users")
+data class User(
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    val id: Int = 0,
+    @ColumnInfo(name = "username")
+    val username: String,
+    @ColumnInfo(name = "password")
+    val password: String,
+    @ColumnInfo(name = "first_name")
+    val firstName: String,
+    @ColumnInfo(name = "last_name")
+    val lastName: String,
+    @ColumnInfo(name = "birth_date")
+    val birthDate: String,
+    @ColumnInfo(name = "height")
+    val height: Int,
+    @ColumnInfo(name = "weight")
+    val weight: Int,
+    @ColumnInfo(name = "bmi")
+    val bmi: Float,
+    @ColumnInfo(name = "gender")
+    val gender: String
+)
+
+теперь нужно написать код главного экрана, в нем будет textView ("Выберите цель")
+и recyclerView (разметку писать не надо), набор массы, похудение, поддержание формы , Увеличение выносливости (кардио-тренировки, бег, плавание)
+Подготовка к марафону (специализированный план тренировок)
+Увеличение силы (пауэрлифтинг, тяжелая атлетика)
+Функциональный тренинг (кроссфит, упражнения с собственным весом)
+Гибкость и растяжка (йога, пилатес, стретчинг)
+Реабилитация после травм (щадящие тренировки)
+Подготовка к соревнованиям (единоборства, кроссфит-соревнования)
+Тонус мышц (для начинающих, легкие нагрузки)
+Снижение стресса (медитация, дыхательные практики + легкие тренировки)
+Улучшение осанки (упражнения для спины и корпуса)

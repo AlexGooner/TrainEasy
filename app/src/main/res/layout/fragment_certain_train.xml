@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="70dp"
+    tools:context=".presentation.certaintrain.CertainTrainFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/certain_train_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/graphik_bold"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.001"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/certain_train_location_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/graphik_super"
+                android:text="@string/location"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.055"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/certain_train_title_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/certain_train_difficulty_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/graphik_super"
+                android:text="@string/difficulty"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.087"
+                app:layout_constraintStart_toEndOf="@+id/certain_train_location_title"
+                app:layout_constraintTop_toBottomOf="@+id/certain_train_title_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/certain_train_duration_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/graphik_super"
+                android:text="@string/duration"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.209"
+                app:layout_constraintStart_toEndOf="@+id/certain_train_difficulty_title"
+                app:layout_constraintTop_toBottomOf="@+id/certain_train_title_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/certain_train_calories_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/graphik_super"
+                android:text="@string/calories"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.451"
+                app:layout_constraintStart_toEndOf="@+id/certain_train_duration_title"
+                app:layout_constraintTop_toBottomOf="@+id/certain_train_title_text_view" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/certain_train_location_text_view"
+                android:layout_width="52dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:fontFamily="@font/graphik_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.055"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/certain_train_location_title" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/certain_train_difficulty_first_btn"
+                android:layout_width="6dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/grey_line"
+                android:clickable="false"
+                app:cornerRadius="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.12"
+                app:layout_constraintStart_toEndOf="@+id/certain_train_location_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/certain_train_difficulty_title" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/difficulty_second_btn"
+                android:layout_width="6dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/grey_line"
+                android:clickable="false"
+                app:cornerRadius="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.025"
+                app:layout_constraintStart_toEndOf="@+id/certain_train_difficulty_first_btn"
+                app:layout_constraintTop_toBottomOf="@+id/certain_train_difficulty_title" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/difficulty_third_btn"
+                android:layout_width="6dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/grey_line"
+                android:clickable="false"
+                app:cornerRadius="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.029"
+                app:layout_constraintStart_toEndOf="@+id/difficulty_second_btn"
+                app:layout_constraintTop_toBottomOf="@+id/certain_train_difficulty_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/certain_train_duration_text_view"
+                android:layout_width="120dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/graphik_regular"
+                android:textAlignment="center"
+                android:textSize="12sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.301"
+                app:layout_constraintStart_toEndOf="@+id/difficulty_third_btn"
+                app:layout_constraintTop_toBottomOf="@+id/certain_train_duration_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/certain_train_calories_text_view"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.442"
+                app:layout_constraintStart_toEndOf="@+id/certain_train_duration_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/certain_train_calories_title" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/certain_train_description_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="@string/description"
+                android:fontFamily="@font/graphik_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.046"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/certain_train_location_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/certain_train_description_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/graphik_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.048"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/certain_train_description_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/train_list_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/train_list"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.057"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/certain_train_description_text_view"
+                android:fontFamily="@font/graphik_bold"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_exercises"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/train_list_title"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

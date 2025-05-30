@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Cook it easy</string>
+    <string name="app_name">Train it easy</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="enter">Вход</string>
@@ -27,4 +27,12 @@
     <string name="get_recipe">Получить рецепт</string>
     <string name="prep_time">Подготовка: %d мин</string>
     <string name="cook_time">Приготовление: %d мин</string>
+    <string name="choose_goal">Выберите цель</string>
+    <string name="train_title">Название тренировки</string>
+    <string name="difficulty">Сложность</string>
+    <string name="location">Локация</string>
+    <string name="duration">Продолжительность</string>
+    <string name="calories">Калории</string>
+    <string name="description">Описание</string>
+    <string name="train_list">Список упражнений</string>
 </resources>

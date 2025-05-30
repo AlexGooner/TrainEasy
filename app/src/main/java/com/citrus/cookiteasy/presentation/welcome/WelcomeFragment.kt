@@ -55,10 +55,10 @@ class WelcomeFragment : Fragment() {
         val spannableString = SpannableString(username)
 
         val colors = intArrayOf(
-            "#800080".toColorInt(), // Фиолетовый
-            "#FFA500".toColorInt(), // Оранжевый
-            "#FBFB53".toColorInt(), // Желтый
-            "#FF0000".toColorInt()  // Красный
+            "#800080".toColorInt(),
+            "#FFA500".toColorInt(),
+            "#FBFB53".toColorInt(),
+            "#FF0000".toColorInt()
         )
         val shader = LinearGradient(
             0f, 0f, 0f, binding.animatedTextView.textSize,
