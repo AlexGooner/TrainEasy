@@ -11,6 +11,7 @@ import com.citrus.cookiteasy.R
 import com.citrus.cookiteasy.data.database.Training
 import com.citrus.cookiteasy.data.database.TrainingRepository
 import com.citrus.cookiteasy.databinding.FragmentTrainingListBinding
+import com.citrus.cookiteasy.presentation.InformationAboutTrains
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -46,8 +47,24 @@ class TrainingListFragment : Fragment() {
 
         binding.trainListTitleTextView.text = title
 
+        when (title) {
+            "Набор массы" -> binding.trainListInformationTextView.text = InformationAboutTrains.gainingMass
+            "Похудение" -> binding.trainListInformationTextView.text = InformationAboutTrains.weightLoss
+            "Поддержание формы" -> binding.trainListInformationTextView.text = InformationAboutTrains.keepingFit
+            "Увеличение выносливости" -> binding.trainListInformationTextView.text = InformationAboutTrains.increasedStamina
+            "Увеличение силы" -> binding.trainListInformationTextView.text = InformationAboutTrains.increasedStrengh
+            "Гибкость и растяжка" -> binding.trainListInformationTextView.text = InformationAboutTrains.flexibilityAndStretching
+            "Функциональный тренинг" -> binding.trainListInformationTextView.text = InformationAboutTrains.functionalTraining
+            "Беговые тренировки" -> binding.trainListInformationTextView.text = InformationAboutTrains.runningTraining
+            "Реабилитация после травм" -> binding.trainListInformationTextView.text = InformationAboutTrains.rehabilitationAfterInjuries
+            "Улучшение осанки" -> binding.trainListInformationTextView.text = InformationAboutTrains.improvedPosture
+        }
+
         val trainings = repository.getTrainings()
         val adapter = TrainingListAdapter(trainings, navController)
         binding.trainListRecyclerView.adapter = adapter
+
+
+
     }
 }

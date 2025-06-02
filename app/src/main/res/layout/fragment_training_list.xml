@@ -21,20 +21,44 @@
         app:layout_constraintVertical_bias="0.023"
         android:layout_marginBottom="20dp"/>
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/train_list_information_text_view"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/train_list_title_text_view"
+        android:fontFamily="@font/graphik_regular"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/train_list_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:text="@string/training_list"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/graphik_bold"
+        app:layout_constraintTop_toBottomOf="@id/train_list_information_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/train_list_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/train_list_title_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/train_list_text_view"
         app:layout_constraintVertical_bias="0.042"
         tools:listitem="@layout/item_train"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:paddingStart="35dp"
         tools:ignore="RtlSymmetry"
         android:paddingBottom="90dp"

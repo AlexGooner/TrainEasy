@@ -99,44 +99,38 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/certain_train_location_title" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/certain_train_difficulty_first_btn"
-                android:layout_width="6dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="24dp"
-                android:backgroundTint="@color/grey_line"
-                android:clickable="false"
-                app:cornerRadius="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.12"
-                app:layout_constraintStart_toEndOf="@+id/certain_train_location_text_view"
-                app:layout_constraintTop_toBottomOf="@+id/certain_train_difficulty_title" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/certain_rating_text_view"
+                android:layout_width="48dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="4dp"
+                android:text="3"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@+id/certain_progress_circular"
+                app:layout_constraintEnd_toEndOf="@+id/certain_progress_circular"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/certain_progress_circular"
+                app:layout_constraintTop_toTopOf="@+id/certain_progress_circular"
+                app:layout_constraintVertical_bias="1.0" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/difficulty_second_btn"
-                android:layout_width="6dp"
-                android:layout_height="28dp"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="@color/grey_line"
-                android:clickable="false"
-                app:cornerRadius="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.025"
-                app:layout_constraintStart_toEndOf="@+id/certain_train_difficulty_first_btn"
-                app:layout_constraintTop_toBottomOf="@+id/certain_train_difficulty_title" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/difficulty_third_btn"
-                android:layout_width="6dp"
-                android:layout_height="36dp"
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/certain_progress_circular"
+                android:layout_width="46dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="8dp"
-                android:backgroundTint="@color/grey_line"
-                android:clickable="false"
-                app:cornerRadius="0dp"
+                android:progress="100"
+                app:indicatorColor="@color/green"
+                app:indicatorSize="40dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.029"
-                app:layout_constraintStart_toEndOf="@+id/difficulty_second_btn"
-                app:layout_constraintTop_toBottomOf="@+id/certain_train_difficulty_title" />
+                app:layout_constraintHorizontal_bias="0.28"
+                android:layout_marginStart="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/certain_train_difficulty_title"
+                app:trackColor="@color/grey_line"
+                app:trackCornerRadius="4dp"
+                app:trackThickness="4dp" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/certain_train_duration_text_view"
@@ -148,8 +142,8 @@
                 android:textSize="12sp"
 
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.301"
-                app:layout_constraintStart_toEndOf="@+id/difficulty_third_btn"
+                app:layout_constraintHorizontal_bias="0.257"
+                app:layout_constraintStart_toEndOf="@+id/certain_progress_circular"
                 app:layout_constraintTop_toBottomOf="@+id/certain_train_duration_title" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -181,10 +175,11 @@
                 android:id="@+id/certain_train_description_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
                 android:fontFamily="@font/graphik_light"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.048"
+                app:layout_constraintHorizontal_bias="0.012"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/certain_train_description_title" />
 

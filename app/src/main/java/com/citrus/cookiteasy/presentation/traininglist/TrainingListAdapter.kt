@@ -13,6 +13,7 @@ import com.citrus.cookiteasy.R
 import com.citrus.cookiteasy.data.database.Training
 import com.citrus.cookiteasy.presentation.ColorsFromRes
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.progressindicator.CircularProgressIndicator
 
 class TrainingListAdapter(private val trains: List<Training>, val navController: NavController) :
     RecyclerView.Adapter<TrainingListAdapter.TrainListViewHolder>() {
@@ -31,19 +32,14 @@ class TrainingListAdapter(private val trains: List<Training>, val navController:
     ) {
         val train = trains[position]
         holder.nameTV.text = train.title
-        holder.descriptionTV.text = train.description
+        holder.descriptionTV.text = truncateTextWithSentences(train.description ?: "")
+        holder.ratingText.text = train.difficulty.toString()
 
 
-
-        if (train.difficulty.toInt() <= 2) {
-            holder.easyBtn.setBackgroundColor(ColorsFromRes.green)
-        } else if (train.difficulty.toInt() > 2 && train.difficulty.toInt() <= 4) {
-            holder.easyBtn.setBackgroundColor(ColorsFromRes.yellow)
-            holder.mediumBtn.setBackgroundColor(ColorsFromRes.yellow)
-        } else {
-            holder.easyBtn.setBackgroundColor(ColorsFromRes.red)
-            holder.mediumBtn.setBackgroundColor(ColorsFromRes.red)
-            holder.hardBtn.setBackgroundColor(ColorsFromRes.red)
+        when(train.difficulty) {
+            1,2 -> holder.progressCircular.setIndicatorColor(ColorsFromRes.green)
+            3,4 -> holder.progressCircular.setIndicatorColor(ColorsFromRes.yellow)
+            else -> holder.progressCircular.setIndicatorColor(ColorsFromRes.red)
         }
 
         holder.itemView.setOnClickListener {
@@ -59,13 +55,31 @@ class TrainingListAdapter(private val trains: List<Training>, val navController:
 
     override fun getItemCount() = trains.size
 
+    fun truncateTextWithSentences(text: String, maxLength: Int = 110): String {
+        if (text.length <= maxLength) return text
+
+        // Берем первые maxLength символов
+        val truncated = text.take(maxLength)
+
+        // Находим индексы всех точек
+        val dotIndices = truncated.mapIndexedNotNull { index, c ->
+            index.takeIf { c == '.' }
+        }
+
+        return when {
+            // Если есть точки - берем до последней полной точки
+            dotIndices.isNotEmpty() -> truncated.substring(0, dotIndices.last() + 1)
+            // Если нет точек - обрезаем с многоточием
+            else -> text.take(maxLength - 3) + "..."
+        }
+    }
+
 
     class TrainListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTV: TextView = itemView.findViewById(R.id.train_title)
         val descriptionTV: TextView = itemView.findViewById(R.id.train_description_text_view)
-        val easyBtn: MaterialButton = itemView.findViewById(R.id.difficulty_first_btn)
-        val mediumBtn: MaterialButton = itemView.findViewById(R.id.difficulty_second_btn)
-        val hardBtn: MaterialButton = itemView.findViewById(R.id.difficulty_third_btn)
+        val ratingText : TextView = itemView.findViewById(R.id.ratingText)
+        val progressCircular : CircularProgressIndicator = itemView.findViewById(R.id.progress_circular)
 
     }
 }

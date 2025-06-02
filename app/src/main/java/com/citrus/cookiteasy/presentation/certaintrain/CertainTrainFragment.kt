@@ -44,17 +44,13 @@ class CertainTrainFragment : Fragment() {
         }
         val difficulty = arguments?.getInt("difficulty")
 
-        if (difficulty != null) {
-            if (difficulty <= 2) {
-                binding.certainTrainDifficultyFirstBtn.setBackgroundColor(ColorsFromRes.green)
-            } else if (difficulty.toInt() > 2 && difficulty.toInt() <= 4) {
-                binding.certainTrainDifficultyFirstBtn.setBackgroundColor(ColorsFromRes.yellow)
-                binding.difficultySecondBtn.setBackgroundColor(ColorsFromRes.yellow)
-            } else {
-                binding.certainTrainDifficultyFirstBtn.setBackgroundColor(ColorsFromRes.red)
-                binding.difficultySecondBtn.setBackgroundColor(ColorsFromRes.red)
-                binding.difficultyThirdBtn.setBackgroundColor(ColorsFromRes.red)
-            }
+        binding.certainRatingTextView.text = difficulty.toString()
+
+
+        when(difficulty) {
+            1,2 -> binding.certainProgressCircular.setIndicatorColor(ColorsFromRes.green)
+            3,4 -> binding.certainProgressCircular.setIndicatorColor(ColorsFromRes.yellow)
+            else -> binding.certainProgressCircular.setIndicatorColor(ColorsFromRes.red)
         }
 
         Log.d("CertainTrain", "Loading training ID: $trainingId")

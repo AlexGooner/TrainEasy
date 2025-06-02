@@ -35,4 +35,5 @@
     <string name="calories">Калории</string>
     <string name="description">Описание</string>
     <string name="train_list">Список упражнений</string>
+    <string name="training_list">Список тренировок</string>
 </resources>
